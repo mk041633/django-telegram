@@ -31,7 +31,7 @@
 ## Использование
 
 1. Зарегистрируйте нового пользователя через API:  
-   POST: https://{server_url}/api/register/  
+   `POST: https://{server_url}/api/register/`  
    Data: JSON  {  
      "username":"username",  
      "password":"password",  
@@ -46,7 +46,7 @@
    }  
      
 2. Логин:  
-   POST: https://{server_url}/api/login/  
+   `POST: https://{server_url}/api/login/`  
    Data: JSON  {  
      "username":"username",  
      "password":"password"  
@@ -56,11 +56,11 @@
    Для этого отправить боту @djangomessage_bot сообщение - токен.
      
 4. Используйте API для отправки сообщений боту.  
-   POST: https://{server_url}/api/send-message/  
+   `POST: https://{server_url}/api/send-message/`  
    Data: JSON  {  
      "token":"e9ab542e",  
      "message":"Hello, World!"  
    }
      
 5. Используйте API для получения списка сообщении.  
-   GET: https://{server_url}/api/message-list/  
+   `GET: https://{server_url}/api/message-list/`  
