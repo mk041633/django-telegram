@@ -30,38 +30,37 @@
 
 ## Использование
 
-1. Зарегистрируйте нового пользователя через API:
-   POST: https://{server_url}/api/register/
-   Data: JSON
-   {
-     "username":"username",
-     "password":"password",
-     "first_name":"first_name"
+1. Зарегистрируйте нового пользователя через API:  
+   POST: https://{server_url}/api/register/  
+   Data: JSON  {  
+     "username":"username",  
+     "password":"password",  
+     "first_name":"first_name"  
+   }  
+   Response:  {  
+     "id":"id",  
+     "username":"username",  
+     "password":"password",  
+     "first_name":"first_name",  
+     "token":"token"  
+   }  
+     
+2. Логин:  
+   POST: https://{server_url}/api/login/  
+   Data: JSON  {  
+     "username":"username",  
+     "password":"password"  
    }
-   Response:
-   {
-     "id":"id",
-     "username":"username",
-     "password":"password",
-     "first_name":"first_name",
-     "token":"token"
-   }
-   
-2. Логин:
-   POST: https://{server_url}/api/login/
-   Data: JSON
-   {
-     "username":"username",
-     "password":"password"
-   }
-3. Привязка аккаунта Telegram к пользователю, отправив боту сообщение с токеном.
+     
+3. Привязка аккаунта Telegram к пользователю, отправив боту сообщение с токеном.  
    Для этого отправить боту @djangomessage_bot сообщение - токен.
-4. Используйте API для отправки сообщений боту.
-   POST: https://{server_url}/api/send-message/
-   Data: JSON
-   {
-     "token":"e9ab542e",
-     "message":"Hello, World!"
+     
+4. Используйте API для отправки сообщений боту.  
+   POST: https://{server_url}/api/send-message/  
+   Data: JSON  {  
+     "token":"e9ab542e",  
+     "message":"Hello, World!"  
    }
-5. Используйте API для получения списка сообщении.
-   GET: https://{server_url}/api/message-list/
+     
+5. Используйте API для получения списка сообщении.  
+   GET: https://{server_url}/api/message-list/  
